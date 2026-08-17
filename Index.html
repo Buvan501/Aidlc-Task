@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Data</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bio Data</h1>
+        <form id="biodata">
+            <div class="formgroup">
+                <label class="required" for="name">Full Name:</label>
+                <input type="text" required>
+            </div>
+            <div class="formgroup">
+                <label class="required" for="DoB">Date of Birth:</label>
+                <input type="date" required>
+            </div>
+            <div class="formgroup">
+            <label class="required" for="Gender">Gender:</label>
+                <select name="Gender" id="Gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="formgroup">
+                <label class="required" for="email">Email</label>
+                <input type="email" required>
+            </div>
+            <div class="formgroup">
+                <label class="required" for="PhoneNumber">Phone Number:</label>
+                <input type="tel" maxlength="10" required>
+            </div>
+            <div class="formgroup">
+                <label class="required" for="address">Address:</label>
+                <input type="text" maxlength="200" required>
+            </div>
+            <div class="formgroup">
+                <label for="Nationality">Nationality:</label>
+                <input type="text">
+            </div>
+            <div class="formgroup">
+                <label for="MaritalStatus">Marital Status:</label>
+                <select name="Marital" id="Marital">
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="formgroup">
+                <label for="ProfilePhoto">Profile Photo:</label>
+                <input type="file" id="profilephoto" accept=".jpg,.png">
+            </div>
+            <button type="submit" id="submitbutton">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
