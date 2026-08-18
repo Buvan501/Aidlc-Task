@@ -52,8 +52,9 @@ h1{
 }
 
 #submitbutton{
-    width: 100%;
+    width: 50%;
     padding: 10px;
+    margin-right: 50px;
     background-color: #333;
     color: white;
     border: none;
@@ -71,3 +72,37 @@ h1{
   color: red;
   font-weight: bold;
 }
+
+#resetbutton{
+    width: 50%;
+    padding: 10px;
+    float: right;
+    margin-left: -50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#resetbutton:hover{
+    background-color: #555;
+}
+
+.output{
+    margin: top 20px;
+    padding:20px;
+    border :1px thick solid #000;
+    border-radius:8px;
+    background-color: #f1f1f1;
+}
+
+.output h2{
+    margin-top:0%;
+    text-align: center;
+}
+.output p{
+    margin: 5px 0;
+}
+
