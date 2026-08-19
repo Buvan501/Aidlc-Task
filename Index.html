@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Bio Data</h1>
+        <div id="error"></div>
         <form id="biodata">
             <div class="formgroup">
                 <label class="required" for="name">Full Name:</label>
@@ -19,8 +20,9 @@
                 <input type="date" id="DoB" required>
             </div>
             <div class="formgroup">
-            <label class="required" for="Gender">Gender:</label>
+            <label class="Gender" for="Gender" required>Gender:</label>
                 <select name="Gender" id="Gender" required>
+                    <option value="" disabled selected>Select Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
@@ -45,6 +47,7 @@
             <div class="formgroup">
                 <label for="MaritalStatus">Marital Status:</label>
                 <select name="Marital" id="Marital">
+                    <option value="" disabled selected>Select Marital Status</option>
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Other">Other</option>

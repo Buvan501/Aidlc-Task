@@ -1,6 +1,9 @@
 const today =new Date().toISOString().split('T')[0];
 document.getElementById("DoB").setAttribute("max",today);
 
+const form=document.getElementById("biodata");
+const error=document.getElementById("error");
+
 document.getElementById("biodata").addEventListener("submit", function(event){
     event.preventDefault();
 
@@ -15,6 +18,33 @@ document.getElementById("biodata").addEventListener("submit", function(event){
     
     const output=document.getElementById("output");
 
+    let messages=[];
+    if(name===""||name==null){
+        messages.push('Name is required');
+    }
+    if(doB===""||doB==null){
+        messages.push('Date of Birth is required');
+    }
+    if(gender===""||gender==null){
+        messages.push('Gender is required');
+    }
+    if(email===""||email==null){
+        messages.push('Email is required');
+    }
+    if(phoneNumber===""||phoneNumber==null){
+        messages.push('Phone Number is required');
+    }
+    else if(!/^\d{10}$/.test(phoneNumber)){
+        messages.push('Phone Number must be 10 digits');
+    }
+    if(address===""||address==null){
+        messages.push('Address is required');
+    }
+    if(messages.length>0){
+        error.innerHTML=messages.join('<br>');
+        event.preventDefault();
+        error.innerText=messages.join(', ');
+    }
     output.innerHTML=`
     <h2>Bio Data Details</h2>
     <div id="list">
